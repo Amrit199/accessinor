@@ -18,6 +18,5 @@ export const navbar = {
             name: "Blogs",
         },
     ],
-    demo: "Get Demo",
     button: "Login"
 }
