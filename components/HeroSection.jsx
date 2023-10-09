@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-screen my-auto flex bg-[#76c3d0] flex-col lg:flex-row items-center px-5 gap-4">
+    <div className="w-full h-screen my-auto flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 gap-4">
       <div className=" w-full flex flex-col items-center justify-center gap-6 text-center padding-x">
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-3xl md:text-5xl font-bold">
           Welcome to Our Accessibility Checker
         </h1>
         <p className="text-xl mt-4">
