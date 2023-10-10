@@ -1,22 +1,24 @@
 "use client";
 import React from "react";
-import accessibility from "../public/featureimg.jpg";
-import DemoButton from "./DemoButton";
+import accessibility from "../public/webchecker.png";
+import DemoButton from "./Buttons/DemoButton";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-screen my-auto flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 gap-4">
-      <div className=" w-full flex flex-col items-center justify-center gap-6 text-center padding-x">
-        <h1 className="text-3xl md:text-5xl font-bold">
+    <div className="w-full h-screen flex flex-col lg:flex-row items-center justify-center px-5 pt-32 lg:pt-0 gap-12 overflow-hidden">
+      <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
+        <h1 className="text-4xl font-bold">
           Welcome to Our Accessibility Checker
         </h1>
         <p className="text-xl mt-4">
-          Helping make the web a more accessible place.
+          We believe in creating an inclusive digital world, where everyone,
+          regardless of their abilities, can access and navigate the web
+          effortlessly.
         </p>
         <motion.div
-          className="bg-white px-6 py-1 rounded-full"
+          className="bg-[#76c3d0] px-6 py-1 rounded-full"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 300, damping: 17 }}
@@ -24,11 +26,12 @@ const HeroSection = () => {
           <DemoButton />
         </motion.div>
       </div>
-      <div className="w-full ">
+      <div className="w-full">
         <Image
           src={accessibility}
           alt="accessibility checked image"
-          className="w-full"
+          aria-label="hand pointing to accessible icons"
+          className="w-3/4 md:max-w-xl mx-auto lg:w-full"
         />
       </div>
     </div>

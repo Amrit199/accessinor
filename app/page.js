@@ -1,15 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import DemoButton from "@/components/DemoButton";
+import DemoButton from "@/components/Buttons/DemoButton";
 import Image from "next/image";
-import accessibility from "../public/featureimg.jpg";
+import accessibility from "../public/webchecker.png";
 import HeroSection from "@/components/HeroSection";
+import AuditSection from "@/components/AuditSection";
+import Intro from "@/components/Buttons/Intro";
 
 export default function Home() {
   return (
     <div className="w-full bg-white text-black">
       {/* hero section */}
       <HeroSection />
+      <Intro />
+      <AuditSection />
+
       <div>
 
         <section className="features py-12">
