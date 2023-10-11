@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
-import ContactUsButton from './ContactUsButton'
+import ContactUsButton from './Buttons/ContactUsButton'
+import Readmore from './Buttons/Readmore'
 
 const Intro = () => {
   return (
@@ -10,7 +11,7 @@ const Intro = () => {
         <p className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] mx-auto text-center text-xl">
         AccessiNor is proud to introduce our primary offering, a comprehensive web accessibility checker. This innovative product has been carefully designed to assist website owners and developers in ensuring compliance with both web accessibility standards and the stringent regulations set by the Norwegian government. Our web accessibility checker goes beyond standard compliance checks by incorporating user experience and design considerations, with the ultimate aim of making the web more inclusive for all users
         </p>
-        <ContactUsButton />
+        <Readmore item={"Read more about Accessinor here"} />
       </div>
     </div>
   )

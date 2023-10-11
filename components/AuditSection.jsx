@@ -4,6 +4,7 @@ import accessibility from "../public/featureimg.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ContactUsButton from "./Buttons/ContactUsButton";
+import Readmore from "./Buttons/Readmore";
 
 const AuditSection = () => {
   return (
@@ -17,14 +18,14 @@ const AuditSection = () => {
         />
       </div>
       <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
-        <h1 className="text-4xl font-bold">
-          We help you to make your <span className="text-white">Accessible</span> for everyone 
+        <h1 className="text-3xl font-bold">
+          We help you to make your website <span className="text-white text-4xl">Accessible</span> for everyone 
         </h1>
         <p className="text-xl mt-4">
           Our team of experts is ready to guide you in making your website ADA
           compliant.
         </p>
-          <ContactUsButton />
+          <ContactUsButton item={"Contact Our team"}/>
       </div>
     </div>
   );
