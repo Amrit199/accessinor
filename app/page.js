@@ -5,6 +5,7 @@ import AuditSection from "@/components/AuditSection";
 import Intro from "@/components/Intro";
 import GetStarted from "@/components/GetStarted";
 import Reaveal  from "@/components/Reaveal";
+import Offers from "@/components/Offers";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
         <Intro />
       <AuditSection />
+      <Offers />
       <GetStarted />
     </div>
   );
