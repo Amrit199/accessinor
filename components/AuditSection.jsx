@@ -5,9 +5,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ContactUsButton from "./Buttons/ContactUsButton";
 import Readmore from "./Buttons/Readmore";
+import Reveal from "./Reaveal";
 
 const AuditSection = () => {
   return (
+    <Reveal>
     <div className="w-full h-screen flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 pt-32 lg:pt-0 gap-12 overflow-hidden">
       <div className="w-full">
         <Image
@@ -28,6 +30,7 @@ const AuditSection = () => {
           <ContactUsButton item={"Contact Our team"}/>
       </div>
     </div>
+    </Reveal>
   );
 };
 
