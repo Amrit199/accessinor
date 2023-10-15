@@ -6,6 +6,7 @@ import Intro from "@/components/Intro";
 import GetStarted from "@/components/GetStarted";
 import Reaveal from "@/components/Reaveal";
 import Offers from "@/components/Offers";
+import AiIntro from "../components/AiIntro";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Intro />
       <AuditSection />
       <Offers />
+      <AiIntro />
       <GetStarted />
     </div>
   );

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const DemoButton = () => {
   return (
-    <Link href="/">
+    <Link href="https://web-accessibility-checker.vercel.app/dashboard/app">
       <motion.div
         className="flex items-center justify-center gap-1 text-black cursor-pointer flex-nowrap"
         whileHover={{ scale: 1.1 }}

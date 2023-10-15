@@ -6,8 +6,8 @@ import Reveal from "./Reaveal";
 
 const GetStarted = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-gray-200 py-16 lg:py-32">
-      <div className="w-[95%] lg:w-[70%] mx-auto bg-white p-14 lg:p-10 rounded-3xl flex flex-col items-center justify-center gap-5">
+    <div className="w-full h-full flex flex-col items-center justify-center py-16 lg:py-32">
+      <div className="w-[95%] lg:w-[70%] mx-auto bg-blue-100 p-14 lg:p-10 rounded-3xl flex flex-col items-center justify-center gap-5">
         <div>
         <h2 className="text-3xl font-bold">
           Get Started with Accessibility Today!
