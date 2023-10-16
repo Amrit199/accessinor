@@ -12,7 +12,7 @@ const AiIntro = () => {
         <h1 className="text-4xl">
           AI Integration for Effortless Accessibility
         </h1>
-        <h1 className="text-blue-700 text-4xl font-bold">
+        <h1 className="text-primary text-4xl font-bold">
           Automated Accuracy Intelligence
         </h1>
         <p className="text-lg">

@@ -1,23 +1,23 @@
 "use client";
 import React from "react";
-import accessibility from "../public/webchecker.png";
 import DemoButton from "./Buttons/DemoButton";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Reveal from "./Reaveal";
 import { FaArrowRight } from "react-icons/fa";
+import responsive from "../public/responsive-website.png";
 
 const HeroSection = () => {
   return (
     <Reveal>
-      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-5 pt-32 pb-8 lg:py-44 gap-12 overflow-hidden">
+      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-5 pt-32 pb-8 gap-12 overflow-hidden">
         <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
           <h1 className="text-3xl lg:text-4xl flex items-center justify-center flex-wrap">
             Welcome to Our Accessibility Checker
-            <span className="text-3xl lg:text-4xl text-blue-700 mx-2 animate-pulse">
+            <span className="text-3xl lg:text-4xl text-primary mx-2 animate-pulse">
               <FaArrowRight />
             </span>
-            <span className="text-blue-700 font-bold">AceessiNor AS</span>
+            <span className="text-primary font-bold">AceessiNor AS</span>
           </h1>
 
           <p className="text-lg lg:text-xl lg:mt-4">
@@ -31,17 +31,22 @@ const HeroSection = () => {
             ultimate aim of making the web more inclusive for all users
           </p>
           <motion.div
-            className="bg-blue-200 px-6 py-1 rounded-full"
+            className="bg-primary hover:bg-p-hover text-white px-6 py-1 rounded-full"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300, damping: 17 }}
           >
-            <DemoButton />
+            <DemoButton
+              item={"Get Demo"}
+              classname={
+                "flex items-center justify-center gap-1 cursor-pointer flex-nowrap"
+              }
+            />
           </motion.div>
         </div>
         <div className="w-full">
           <Image
-            src={accessibility}
+            src={responsive}
             alt="accessibility checked image"
             aria-label="hand pointing to accessible icons"
             className="w-full md:max-w-xl mx-auto lg:w-full"

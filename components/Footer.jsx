@@ -33,9 +33,8 @@ const Footer = () => {
           <h4 className="text-[#7fafb1] text-xl">follow us</h4>
           <div className="flex flex-col items-start gap-2">
             {follow.map((item, index) => (
-              <Link href="/" className="group">
+              <Link key={index} href="/" className="group">
                 <div
-                  key={index}
                   className="flex items-center space-x-2 text-base"
                 >
                   <item.icon className="group-hover:scale-125 group-hover:text-blue-600 transition-all delay-150 duration-300" />

@@ -10,7 +10,7 @@ const Intro = () => {
         <div className="lg:absolute w-full md:w-[70%] lg:w-[50%] mx-auto bg-white rounded-3xl px-2 py-3 lg:py-6 lg:top-1/4 lg:right-1/2 lg:transform lg:translate-x-1/2 lg:-translate-y-1/4">
           <Reveal>
             <div className="flex flex-col items-center justify-center gap-4 lg:gap-10">
-              <h1 className="text-3xl lg:text-4xl font-bold text-blue-700">
+              <h1 className="text-3xl lg:text-4xl font-bold text-primary">
                 Why Accessinor?
               </h1>
               <p className=" text-lg lg:text-xl">

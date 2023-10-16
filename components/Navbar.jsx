@@ -6,6 +6,8 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { navbar } from "@/constants";
 import DemoButton from "./Buttons/DemoButton";
 import LoginButton from "./Buttons/LoginButton";
+import Image from "next/image";
+import logo from '../public/checked.png'
 
 const Navbar = () => {
   const [shadow, setShadow] = useState(false);
@@ -53,6 +55,7 @@ const Navbar = () => {
             className="flex items-center gap-1 cursor-pointer"
             aria-label="Navigate to homepage"
           >
+            <Image src={logo} alt="logo" className="w-8 h-8 rounded-full" />
             <span className="font-bold text-3xl">{navbar.logo}</span>
           </Link>
         </div>
@@ -60,7 +63,7 @@ const Navbar = () => {
         <div className="basis-2/4 w-full hidden lg:flex items-center justify-between gap-5 text-xl">
           {navbar.menus.map((menu, index) => (
             <Link
-              href={`/${menu.name}`}
+              href={menu.link}
               key={index}
               className="hover:text-[#206e61] cursor-pointer text-[1.2rem] font-semibold"
               aria-label={`Navigate to ${menu.name} page`}
@@ -71,8 +74,8 @@ const Navbar = () => {
         </div>
         {/* mobile menu icon > 800 screen*/}
         <div className="w-full lg:basis-1/4 flex items-center justify-end gap-6">
-          <div className="hidden w-full md:flex items-center justify-end gap-4 text-lg">
-            <DemoButton />
+          <div className="hidden w-full md:flex items-center justify-end gap-8 text-lg">
+            <DemoButton item={"Get Demo"} classname={"flex items-center justify-center gap-1 text-black cursor-pointer flex-nowrap hover:text-[#206e61]"}/>
             <LoginButton />
           </div>
           <div className="flex items-center justify-center lg:hidden">

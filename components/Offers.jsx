@@ -12,7 +12,7 @@ const Offers = () => {
       <div className="flex flex-col items-center justify-center gap-14 py-16 lg:py-24">
         <div className="flex flex-col items-start justify-center gap-4 px-4 lg:px-10">
           <h3 className="flex text-3xl lg:text-4xl items-center justify-center gap-3 flex-wrap">
-            <span className="text-blue-700 font-bold text-4xl lg:text-5xl">
+            <span className="text-primary font-bold text-4xl lg:text-5xl">
               AccessiNor
             </span>{" "}
             Solutions
