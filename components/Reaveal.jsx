@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer"; // Make sure you have this package
+import { useInView } from "react-intersection-observer";
 
 const Reveal = ({ children, width = "fit-content" }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,  // Ensures animation only happens once
-    threshold: 0.1,     // Percentage of element in view to trigger animation
+    triggerOnce: true,  
+    threshold: 0.1,    
   });
 
   const controls = useAnimation();
