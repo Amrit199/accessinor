@@ -7,6 +7,8 @@ import {
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '../public/checked.png'
 
 const website = [
   { name: "Privacy statement", url: "/" },
@@ -26,17 +28,16 @@ const Footer = () => {
   return (
     <div className="w-full p-12 bg-gray-900 text-white flex flex-col gap-12">
       <div className="flex flex-col md:flex-row items-start gap-12 md:gap-6">
-        <div className="basis-2/4 my-auto">
-            <span className="font-bold text-3xl">AccessiNor</span>
+        <div className="basis-2/4 my-auto flex items-center justify-start gap-2">
+          <Image src={logo} alt="logo" className="w-8 h-8 rounded-full" />
+          <span className="font-bold text-3xl">AccessiNor</span>
         </div>
         <div className="basis-1/4 px-3 flex flex-col gap-6">
           <h4 className="text-[#7fafb1] text-xl">follow us</h4>
           <div className="flex flex-col items-start gap-2">
             {follow.map((item, index) => (
               <Link key={index} href="/" className="group">
-                <div
-                  className="flex items-center space-x-2 text-base"
-                >
+                <div className="flex items-center space-x-2 text-base">
                   <item.icon className="group-hover:scale-125 group-hover:text-blue-600 transition-all delay-150 duration-300" />
                   <span className="relative z-10">{item.name}</span>
                 </div>
