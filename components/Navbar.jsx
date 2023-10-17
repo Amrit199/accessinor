@@ -113,7 +113,7 @@ const Navbar = () => {
             {navbar.menus.map((menu, index) => (
               <li key={index}>
                 <Link
-                  href={`/${menu.name}`}
+                  href={menu.link}
                   className="hover:text-[#206e61] cursor-pointer text-[1.2rem] font-semibold"
                   onClick={handleMenu}
                 >
@@ -123,7 +123,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col items-center gap-2 text-lg md:hidden">
-            <DemoButton />
+            <DemoButton item={"Get Demo"} classname={"flex items-center justify-center gap-1 text-black cursor-pointer flex-nowrap hover:text-[#206e61]"}/>
             <LoginButton />
           </div>
         </div>
