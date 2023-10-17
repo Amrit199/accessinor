@@ -3,8 +3,6 @@ import React from "react";
 import HeroSection from "@/components/HeroSection";
 import AuditSection from "@/components/AuditSection";
 import Intro from "@/components/Intro";
-import GetStarted from "@/components/GetStarted";
-import Reaveal from "@/components/Reaveal";
 import Offers from "@/components/Offers";
 import AiIntro from "../components/AiIntro";
 
@@ -16,7 +14,6 @@ export default function Home() {
       <AuditSection />
       <Offers />
       <AiIntro />
-      <GetStarted />
     </div>
   );
 }

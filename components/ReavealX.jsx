@@ -1,11 +1,12 @@
+"use client"
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer"; // Make sure you have this package
+import { useInView } from "react-intersection-observer";
 
-const Reveal = ({ children, width = "fit-content" }) => {
+const ReavealX = ({ children, width = "fit-content" }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,  // Ensures animation only happens once
-    threshold: 0.1,     // Percentage of element in view to trigger animation
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   const controls = useAnimation();
@@ -15,13 +16,12 @@ const Reveal = ({ children, width = "fit-content" }) => {
       controls.start("visible");
     }
   }, [controls, inView]);
-
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, x: 175 },
+          visible: { opacity: 1, x: 0 },
         }}
         initial="hidden"
         animate={controls}
@@ -33,4 +33,4 @@ const Reveal = ({ children, width = "fit-content" }) => {
   );
 };
 
-export default Reveal;
+export default ReavealX;

@@ -4,9 +4,11 @@ import responsive from "../../public/webchecker.png";
 import codel from "../../public/pexels-markus-spiske-4439901.jpg";
 import coder from "../../public/pexels-thisisengineering-3861976.jpg";
 import DemoButton from "@/components/Buttons/DemoButton";
+import ReavealX from "@/components/ReavealX";
 
 const page = () => {
   return (
+    <ReavealX>
     <div className="w-full h-full bg-white text-black py-36 md:py-48 px-5">
       <div className="w-full h-full flex flex-col lg:flex-row items-center gap-20 lg:gap-8">
         <div className="w-full px-8 flex flex-col items-start justify-center gap-4">
@@ -54,6 +56,7 @@ const page = () => {
         </div>
       </div>
     </div>
+    </ReavealX>
   );
 };
 
