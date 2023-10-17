@@ -13,7 +13,7 @@ const GetStarted = () => {
           Get Started with Accessibility Today!
         </h2>
         <p className="text-xl mt-4 mb-6">
-          Don't let your website be a barrier. Let's make it accessible for all.
+          Don&apos;t let your website be a barrier. Let&apos;s make it accessible for all.
         </p>
         </div>
         <ContactUsButton item="Get Started" />

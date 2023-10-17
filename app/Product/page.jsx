@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import responsive from '../../public/webchecker.png'
+import responsive from "../../public/webchecker.png";
 import codel from "../../public/pexels-markus-spiske-4439901.jpg";
 import coder from "../../public/pexels-thisisengineering-3861976.jpg";
-import DemoButton from '@/components/Buttons/DemoButton';
+import DemoButton from "@/components/Buttons/DemoButton";
 
 const page = () => {
   return (
@@ -23,11 +23,11 @@ const page = () => {
             AI, machine learning, and computer vision.
           </p>
           <DemoButton
-              item={"Get Demo"}
-              classname={
-                "flex items-center justify-center gap-1 cursor-pointer flex-nowrap bg-primary hover:bg-p-hover text-white px-6 py-1 rounded-full"
-              }
-            />
+            item={"Get Demo"}
+            classname={
+              "flex items-center justify-center gap-1 cursor-pointer flex-nowrap bg-primary hover:bg-p-hover text-white px-6 py-1 rounded-full"
+            }
+          />
         </div>
         <div className="w-full flex items-center justify-center relative py-6">
           <Image
@@ -54,7 +54,7 @@ const page = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

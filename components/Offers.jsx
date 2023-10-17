@@ -19,7 +19,7 @@ const Offers = () => {
             <GrServices />
           </h3>
           <p className="text-xl">
-            Empower your website's accessibility with our specialized services,
+            Empower your website&apos;s accessibility with our specialized services,
             designed to cater to every web accessibility need
           </p>
         </div>

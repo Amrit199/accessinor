@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import GetStarted from "@/components/GetStarted";
 
 export const metadata = {
   title: "AccessiNor",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <main>
           <Navbar />
           {children}
+          <GetStarted/>
           <Footer />
           </main>
       </body>
