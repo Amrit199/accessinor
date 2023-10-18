@@ -9,6 +9,7 @@ const PricingTab = ({
   price,
   planDescription,
   features,
+  premiumFeatures,
 }) => {
   return (
     <div className={`h-full ${popular ? "dark" : ""}`}>
@@ -25,10 +26,10 @@ const PricingTab = ({
             {planName}
           </div>
           <div className="inline-flex items-baseline mb-2">
-            <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">
+            <span className="text-slate-900 dark:text-slate-200 font-bold text-2xl md:text-3xl">
               Kr.
             </span>
-            <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">
+            <span className="text-slate-900 dark:text-slate-200 font-bold text-2xl md:text-4xl">
               {yearly ? price.yearly : price.monthly}
             </span>
             <span className="text-slate-500 font-medium">/mo</span>
@@ -60,6 +61,29 @@ const PricingTab = ({
             );
           })}
         </ul>
+        {premiumFeatures && premiumFeatures.length > 0 && (
+          <>
+            <div className="text-slate-900 dark:text-slate-200 font-medium my-3">
+              Premium Addons:
+            </div>
+            <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
+              {premiumFeatures.map((feature, index) => {
+                return (
+                  <li key={index} className="flex items-center">
+                    <svg
+                      className="w-3 h-3 fill-primary mr-3 shrink-0"
+                      viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );
@@ -117,8 +141,8 @@ const PricingTable = () => {
           <PricingTab
             yearly={isAnnual}
             popular={false}
-            planName="Essential"
-            price={{ yearly: 313, monthly: 378 }}
+            planName="Standard"
+            price={{ yearly: 3990, monthly: 399 }}
             planDescription="There are many variations available, but the majority have suffered."
             features={[
               "Unlimited placeholder texts",
@@ -132,10 +156,17 @@ const PricingTable = () => {
           <PricingTab
             yearly={isAnnual}
             popular={true}
-            planName="Perform"
-            price={{ yearly: 529, monthly: 594 }}
+            planName="Advanced"
+            price={{ yearly: 13990, monthly: 1399 }}
             planDescription="There are many variations available, but the majority have suffered."
             features={[
+              "Unlimited placeholder texts",
+              "Consectetur adipiscing elit",
+              "Excepteur sint occaecat cupidatat",
+              "Officia deserunt mollit anim",
+              "Predefined chunks as necessary",
+            ]}
+            premiumFeatures={[
               "Unlimited placeholder texts",
               "Consectetur adipiscing elit",
               "Excepteur sint occaecat cupidatat",
@@ -149,9 +180,17 @@ const PricingTable = () => {
             yearly={isAnnual}
             popular={false}
             planName="Enterprise"
-            price={{ yearly: 852, monthly: 917 }}
+            price={{ yearly: 35990, monthly: 3599 }}
             planDescription="There are many variations available, but the majority have suffered."
             features={[
+              "Unlimited placeholder texts",
+              "Consectetur adipiscing elit",
+              "Excepteur sint occaecat cupidatat",
+              "Officia deserunt mollit anim",
+              "Predefined chunks as necessary",
+              "Free from repetition",
+            ]}
+            premiumFeatures={[
               "Unlimited placeholder texts",
               "Consectetur adipiscing elit",
               "Excepteur sint occaecat cupidatat",
