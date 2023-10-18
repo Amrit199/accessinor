@@ -4,7 +4,7 @@ import { RiLoginBoxLine } from "react-icons/ri";
 
 const LoginHeader = ({ heading, paragraph, linkUrl, linkName }) => {
   return (
-    <div className="mb-10">
+    <div className="w-full h-full">
       <div className="flex justify-center">
         <RiLoginBoxLine
           className="h-14 w-14 text-[#389f8e]"

@@ -123,8 +123,12 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col items-center gap-2 text-lg md:hidden">
+            <div onClick={handleMenu}>
             <DemoButton item={"Get Demo"} classname={"flex items-center justify-center gap-1 text-black cursor-pointer flex-nowrap hover:text-[#206e61]"}/>
+            </div>
+            <div onClick={handleMenu}>
             <LoginButton />
+            </div>
           </div>
         </div>
       </aside>
