@@ -18,7 +18,7 @@ const LoginHeader = ({ heading, paragraph, linkUrl, linkName }) => {
         {paragraph}{" "}
         <Link
           href={linkUrl}
-          className="font-medium text-[#389f8e] hover:text-[#206e61]"
+          className="font-medium text-primary hover:text-black"
         >
           {linkName}
         </Link>
