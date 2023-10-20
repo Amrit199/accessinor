@@ -34,10 +34,9 @@ const page = () => {
       });
     }
   };
-  console.log(countries)
   return (
-    <div className="w-full h-full text-black py-24 md:py-48">
-      <div className="w-[30rem] mx-auto flex flex-col items-center justify-center gap-6">
+    <div className="w-full h-full text-black py-24 md:py-28">
+      <div className="w-full min-[500px]:w-[30rem] mx-auto flex flex-col items-center justify-center gap-3">
         <LoginHeader
           heading="Create a new account"
           paragraph="Already have an account?"
@@ -46,7 +45,7 @@ const page = () => {
         />
         <form
           onSubmit={handleSubmit}
-          className="w-full flex flex-col items-center justify-center gap-6 px-6"
+          className="w-full flex flex-col items-center justify-center gap-6 px-6 text-xs min-[350px]:text-sm md:text-base"
         >
           <CustomInput
             title="Full name"
@@ -83,21 +82,23 @@ const page = () => {
             value={formData.name}
             onChange={handleChange}
           />
-          <div className="w-full flex items-center justify-center">
-            <div className="w-full flex flex-col items-start justify-center gap-1">
+          <div className="w-full flex flex-col min-[350px]:flex-row items-center justify-center gap-2">
+            <div className="w-[8rem] flex flex-col items-start justify-center gap-1">
               <label htmlFor="Code">Country Code:</label>
               <select
-                className="rounded-md w-40 overflow-hidden px-3 py-2 border-2 border-gray-300 placeholder-gray-600 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                className="rounded-md w-[8rem] overflow-hidden p-2 border-2 border-gray-300 placeholder-gray-600 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
                 id="country-code"
               >
                 {countries.map((country, index) => (
                   <option key={index}>
-                    {country.name.common}({country.idd.root}
+                    ({country.idd.root}
                     {country.idd.suffixes[0]})
+                    {country.name.common}
                   </option>
                 ))}
               </select>
             </div>
+            <div className="w-full">
             <CustomInput
               title="Phone Number"
               type="text"
@@ -107,7 +108,24 @@ const page = () => {
               value={formData.phone}
               onChange={handleChange}
             />
+            </div>
           </div>
+
+          {/* Terms and Privacy */}
+          <div className="text-sm flex items-center justify-center flex-wrap">
+            By signing up, you agree to the accessiBe's
+            <a href="#" className="text-green-600 px-2">
+              terms of service
+            </a>
+            and
+            <a href="#" className="text-green-600 px-2">
+              privacy policy
+            </a>
+          </div>
+
+          <button className="w-full py-2 bg-primary hover:bg-primary/80 hover:text-black text-white rounded-lg text-lg font-bold">
+            Login
+          </button>
         </form>
       </div>
     </div>

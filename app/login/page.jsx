@@ -28,8 +28,8 @@ const page = () => {
     }
   };
   return (
-    <div className="w-full h-full text-black py-24 md:py-48">
-      <div className=" w-[30rem] mx-auto flex flex-col justify-center items-center gap-4">
+    <div className="w-full h-full text-black py-24 md:py-28">
+      <div className="w-full min-[500px]:w-[30rem] mx-auto flex flex-col justify-center items-center gap-4">
         <LoginHeader
           heading="Login to your account"
           paragraph="Don't have an account yet?"
@@ -38,7 +38,7 @@ const page = () => {
         />
         <form
           onSubmit={handleSubmit}
-          className="w-full flex flex-col items-center justify-center gap-6 px-6"
+          className="w-full flex flex-col items-center justify-center gap-6 px-6 text-xs min-[350px]:text-sm md:text-base"
         >
           <CustomInput
             title="Email address"
@@ -58,10 +58,10 @@ const page = () => {
             value={formData.name}
             onChange={handleChange}
           />
-          <button className="w-full py-2 bg-primary hover:bg-primary/80 hover:text-black text-white rounded-lg text-lg font-bold">
+          <button className="w-full py-2 bg-primary hover:bg-primary/80 hover:text-black text-white rounded-lg text-xs min-[350px]:text-sm md:text-base font-bold">
             Login
           </button>
-          <div className="w-full flex items-center justify-between ">
+          <div className="w-full flex items-center justify-between">
             <div className="flex items-center">
               <input
                 id="remember-me"
@@ -79,8 +79,8 @@ const page = () => {
 
             <div className="text-sm">
               <a
-                href="#"
-                className="font-medium text-gray-900 hover:text-primary"
+                href="/reset-password"
+                className=" sm:font-medium text-gray-900 hover:text-primary"
               >
                 Forgot your password?
               </a>

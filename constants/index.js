@@ -12,6 +12,10 @@ export const navbar = {
       link: "/product",
     },
     {
+      name: "Products",
+      link: "/products"
+    },
+    {
       name: "Services",
       link: "/services",
     },
