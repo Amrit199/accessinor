@@ -8,10 +8,6 @@ export const navbar = {
   logo: "AccessiNor",
   menus: [
     {
-      name: "Product",
-      link: "/product",
-    },
-    {
       name: "Products",
       link: "/products"
     },
