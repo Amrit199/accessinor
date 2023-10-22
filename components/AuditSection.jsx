@@ -10,7 +10,7 @@ import Reveal from "./Reaveal";
 const AuditSection = () => {
   return (
     <Reveal>
-      <div className="w-full h-full flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-10 lg:pt-0 gap-12">
+      <div className="w-full h-full flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-16 lg:py-32 gap-12">
         <div className="w-full">
           <Image
             src={accessibility}
