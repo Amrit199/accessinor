@@ -10,8 +10,8 @@ import responsive from "../public/responsive-website.png";
 const HeroSection = () => {
   return (
     <Reveal>
-      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-5 py-32 gap-12 overflow-hidden">
-        <div className=" w-full flex flex-col items-center justify-center gap-2 text-center">
+      <div className="w-full h-full xl:w-[80%] mx-auto flex flex-col lg:flex-row items-center justify-center px-5 py-32 gap-12 overflow-hidden">
+        <div className=" w-full xl:w-[80%] p-5 flex flex-col items-center justify-center gap-2 text-center">
           <h1 className="text-2xl lg:text-3xl flex items-center justify-center flex-wrap">
             Welcome to Our Accessibility Checker
             <span className="text-3xl lg:text-4xl text-primary mx-2 animate-pulse">

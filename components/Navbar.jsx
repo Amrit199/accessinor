@@ -45,10 +45,11 @@ const Navbar = () => {
       <nav
         className={
           shadow
-            ? "w-full shadow-lg shadow-gray-600 h-20 bg-[#ecf0f3] fixed z-[40] px-7 py-6 flex items-center justify-between"
-            : "w-full h-20 bg-transparent fixed z-[40] px-7 py-6 flex items-center justify-between"
+            ? "w-full shadow-lg shadow-gray-600 h-16 bg-[#ecf0f3] fixed z-[40] px-7 py-6"
+            : "w-full h-16 bg-transparent fixed z-[40] px-7 py-6"
         }
       >
+        <div className=" w-full xl:w-[80%] mx-auto flex items-center justify-between">
         <div className="basis-1/4 w-full">
           <Link
             href="/"
@@ -97,6 +98,7 @@ const Navbar = () => {
               />
             )}
           </div>
+        </div>
         </div>
       </nav>
       {/* mobile menu list */}

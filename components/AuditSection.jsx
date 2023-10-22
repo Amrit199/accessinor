@@ -10,13 +10,13 @@ import Reveal from "./Reaveal";
 const AuditSection = () => {
   return (
     <Reveal>
-      <div className="w-full h-full lg:h-screen flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-10 lg:pt-0 gap-12 overflow-hidden">
+      <div className="w-full h-full flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-10 lg:pt-0 gap-12">
         <div className="w-full">
           <Image
             src={accessibility}
             alt="accessibility checked image"
             aria-label="hand pointing to accessible icons"
-            className="w-full md:max-w-xl mx-auto lg:w-full"
+            className="w-full md:w-[50%] mx-auto lg:w-full"
           />
         </div>
         <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">

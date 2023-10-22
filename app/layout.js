@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
         <main>
           <Navbar />
           {children}
-          <GetStarted/>
+          <GetStarted />
           <Footer />
-          </main>
+        </main>
       </body>
     </html>
   );

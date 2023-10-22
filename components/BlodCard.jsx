@@ -5,8 +5,8 @@ import Link from "next/link";
 const BlodCard = ({ post }) => {
   return (
     <Link href={`/blogs/${post.slug}`}>
-      <div className="h-full group flex max-w-xl flex-col items-start gap-2">
-        <div className="h-3/5 w-full overflow-hidden rounded-2xl">
+      <div className="w-full group flex max-w-xl flex-col items-start gap-2">
+        <div className="w-full overflow-hidden rounded-2xl">
           <Image
             width={380}
             height={350}

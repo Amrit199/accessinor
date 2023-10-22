@@ -10,7 +10,7 @@ const page = () => {
   return (
     <ReavealX>
       <div className="w-full h-full bg-white text-black py-24 md:py-48">
-        <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-8 px-4 lg:px-14">
+        <div className="w-full h-full xl:w-[80%] mx-auto flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-8 px-4 lg:px-14">
           <div className="w-full h-full flex flex-col items-start justify-center gap-4 p-4">
             <h1 className=" text-4xl font-bold text-primary">
               Automated Website Accessibility
@@ -28,25 +28,11 @@ const page = () => {
               }
             />
           </div>
-          <div className="w-full flex items-center justify-center relative px-2">
+          <div className="w-full flex items-center justify-center px-2">
             <Image
               src={responsive}
               alt="accessibility checked image"
-              className="w-full sm:max-w-lg object-cover z-10"
-              width={512}
-              height={512}
-            />
-            <Image
-              src={codel}
-              alt="accessibility checked image"
-              className="hidden md:max-w-md absolute left-7 blur-sm"
-              width={512}
-              height={512}
-            />
-            <Image
-              src={coder}
-              alt="accessibility checked image"
-              className="hidden md:max-w-xs absolute right-7 blur-sm"
+              className="w-full sm:max-w-lg xl:w-full object-cover z-10"
               width={512}
               height={512}
             />

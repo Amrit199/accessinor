@@ -8,7 +8,7 @@ import Reveal from "./Reaveal";
 
 const Offers = () => {
   return (
-    <div className="w-full md:w-[85%] lg:w-[90%] mx-auto h-full">
+    <div className="w-full md:w-[90%] xl:w-[80%] 2xl:w-[70%]  mx-auto h-full">
       <div className="flex flex-col items-center justify-center gap-14 py-16 lg:py-24">
         <div className="flex flex-col items-start justify-center gap-4 px-4 lg:px-10">
           <h3 className="flex text-3xl lg:text-4xl items-center justify-center gap-3 flex-wrap">

@@ -51,7 +51,7 @@ const ServiceCard = () => {
   return (
     <ReavealX>
       <div className="hero-component">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full xl:w-[80%] 2xl:w-[70%] px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
@@ -69,7 +69,7 @@ const ServiceCard = () => {
                         {feature.icon}
                       </div> */}
                         <feature.icon
-                          className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+                          className="absolute left-1 top-1 h-5 w-5 xl:h-7 xl:w-7 text-indigo-600"
                           aria-hidden="true"
                         />
                         {feature.name}

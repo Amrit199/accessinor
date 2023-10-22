@@ -7,7 +7,7 @@ import Reveal from "./Reaveal";
 const AiIntro = () => {
   return (
     <Reveal>
-    <div className="flex flex-col lg:flex-row items-center px-5 gap-4 py-10">
+    <div className="w-full xl:w-[80%] mx-auto flex flex-col lg:flex-row items-center px-5 gap-4 py-10">
       <div className="w-full flex items-start justify-center flex-col gap-4 px-2 lg:px-14">
         <h1 className="text-3xl">
           AI Integration for Effortless Accessibility
