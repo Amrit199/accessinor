@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import AuditSection from "@/components/AuditSection";
 import Intro from "@/components/Intro";
 import Offers from "@/components/Offers";
-import AiIntro from "../components/AiIntro";
+import AiIntro from "../../components/AiIntro";
 
 export default function Home() {
   return (

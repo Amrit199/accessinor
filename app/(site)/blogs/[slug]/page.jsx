@@ -43,6 +43,10 @@ export default function Page({ params }) {
     types: {
       image: SampleImageComonent,
     },
+    block: {
+      h2: ({children}) => <h2 className="text-xl md:text-2xl font-bold">{children}</h2>,
+      normal: ({children}) => <normal className="text-base md:text-lg">{children}</normal>,
+    }
   };
 
   if (!blog) {
@@ -50,16 +54,18 @@ export default function Page({ params }) {
   }
   return (
     <div className="w-full pt-24 pb-6 text-black bg-slate-50">
-      <div className="w-full bg-green-200 p-8 md:p-16">
+      <div className="bg-green-200">
+        <div className="w-full lg:w-[70%] mx-auto p-8 md:p-16">
         <h2 className="text-2xl md:text-5xl font-bold">{blog.title}</h2>
+        </div>
       </div>
-      <div className="w-full p-8 md:p-16 lg:px-24 flex flex-col items-start justify-start gap-5">
+      <div className="w-full lg:w-[70%] mx-auto p-8 md:p-16 flex flex-col items-start justify-start gap-5">
         <p>{blog.intro}</p>
         <Image
           width={380}
           height={350}
           src={blog.mainImage}
-          className="rounded-lg w-auto md:max-w-2xl self-center"
+          className="rounded-lg w-full sm:w-[80%] mx-auto self-center"
           alt={blog.mainImagealt}
         />
         <PortableText value={blog.body} components={components} />
