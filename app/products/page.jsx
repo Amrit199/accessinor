@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import responsive from "../../public/webchecker.png";
-import codel from "../../public/pexels-markus-spiske-4439901.jpg";
-import coder from "../../public/pexels-thisisengineering-3861976.jpg";
+import responsive from "../../../public/webchecker.png";
 import DemoButton from "@/components/Buttons/DemoButton";
 import ReavealX from "@/components/ReavealX";
 
