@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const SampleImageComonent = ({ value, isInLine }) => {
   const { width, height } = getImageDimensions(value);
-  const imageUrl = urlBuilder({ projectId: "7jdr2vdm", dataset: "production" })
+  const imageUrl = urlBuilder({ projectId: process.env.REACT_APP_PROJECT_KEY, dataset: process.env.REACT_APP_DATASET_KEY })
     .image(value)
     .width(isInLine ? 100 : 800)
     .fit("max")
