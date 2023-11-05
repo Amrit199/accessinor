@@ -1,18 +1,20 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { BiPlayCircle } from "react-icons/bi";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { navbar } from "@/constants";
 import DemoButton from "./Buttons/DemoButton";
 import LoginButton from "./Buttons/LoginButton";
 import Image from "next/image";
 import logo from '../public/checked.png'
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [shadow, setShadow] = useState(false);
   const [mobile, setMobile] = useState(false);
   const menuRef = useRef(null);
+  const path = usePathname()
 
   const handleMenu = () => {
     setMobile(!mobile);
@@ -66,7 +68,7 @@ const Navbar = () => {
             <Link
               href={menu.link}
               key={index}
-              className="hover:text-[#206e61] cursor-pointer text-[1.2rem] font-semibold"
+              className={`${menu.link === path ? "text-primary underline decoration-primary underline-offset-4" : ""} hover:scale-110 text-[1.2rem] font-semibold transition-all duration-200`}
               aria-label={`Navigate to ${menu.name} page`}
             >
               {menu.name}
