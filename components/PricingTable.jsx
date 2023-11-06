@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import ReavealX from "./ReavealX";
+import Reveal from "./Reaveal";
 
 const PricingTab = ({
   yearly,
@@ -93,7 +93,7 @@ const PricingTable = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <ReavealX>
+    <Reveal>
       <div>
         {/* Pricing toggle */}
         <div className="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
@@ -201,7 +201,7 @@ const PricingTable = () => {
           />
         </div>
       </div>
-    </ReavealX>
+    </Reveal>
   );
 };
 

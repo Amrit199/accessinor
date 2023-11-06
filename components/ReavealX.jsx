@@ -21,11 +21,11 @@ const ReavealX = ({ children, width = "fit-content" }) => {
       <motion.div
         variants={{
           hidden: { opacity: 0, x: 175 },
-          visible: { opacity: 1, x: 0 },
+          visible: { opacity: 1, x: 0, },
         }}
         initial="hidden"
         animate={controls}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.5, }}
       >
         {children}
       </motion.div>

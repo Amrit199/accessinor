@@ -68,7 +68,7 @@ const Navbar = () => {
             <Link
               href={menu.link}
               key={index}
-              className={`${menu.link === path ? "text-primary underline decoration-primary underline-offset-4" : ""} hover:scale-110 text-[1.2rem] font-semibold transition-all duration-200`}
+              className={`${menu.link === path ? "text-primary underline decoration-primary underline-offset-4" : ""} hover:scale-110 hover:underline hover:decoration-primary hover:underline-offset-4 text-[1.2rem] font-semibold transition-all duration-200`}
               aria-label={`Navigate to ${menu.name} page`}
             >
               {menu.name}

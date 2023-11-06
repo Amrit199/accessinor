@@ -1,3 +1,4 @@
+"use client"
 import { BiCheckSquare } from "react-icons/bi";
 import { TbTargetArrow, TbScanEye } from "react-icons/tb";
 import {
@@ -8,6 +9,9 @@ import {
 import featureimg from "../public/featureimg.jpg";
 import Image from "next/image";
 import ReavealX from "./ReavealX";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
+import { useEffect } from "react";
 const features = [
   {
     name: "Comprehensive Accessibility Checks",
@@ -48,6 +52,7 @@ const features = [
 ];
 
 const ServiceCard = () => {
+
   return (
     <ReavealX>
       <div className="hero-component">
@@ -62,12 +67,6 @@ const ServiceCard = () => {
                   {features.map((feature) => (
                     <div key={feature.name} className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
-                        {/* <div
-                        className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        aria-hidden="true"
-                      >
-                        {feature.icon}
-                      </div> */}
                         <feature.icon
                           className="absolute left-1 top-1 h-5 w-5 xl:h-7 xl:w-7 text-indigo-600"
                           aria-hidden="true"
@@ -88,7 +87,7 @@ const ServiceCard = () => {
           </div>
         </div>
       </div>
-    </ReavealX>
+      </ReavealX>
   );
 };
 
