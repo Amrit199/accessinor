@@ -1,6 +1,7 @@
 "use client";
 import CustomInput from "@/components/CustomInput";
 import LoginHeader from "@/components/LoginHeader";
+import Reveal from "@/components/Reaveal";
 import React, { useState } from "react";
 import countries from "world-countries";
 
@@ -37,6 +38,7 @@ const page = () => {
   return (
     <div className="w-full h-full text-black py-24 md:py-28">
       <div className="w-full min-[500px]:w-[30rem] mx-auto flex flex-col items-center justify-center gap-3">
+        <Reveal>
         <LoginHeader
           heading="Create a new account"
           paragraph="Already have an account?"
@@ -127,6 +129,7 @@ const page = () => {
             Login
           </button>
         </form>
+        </Reveal>
       </div>
     </div>
   );

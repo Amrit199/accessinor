@@ -27,35 +27,51 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const handleShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
-    window.addEventListener("scroll", handleShadow);
-    window.addEventListener("mousedown", handleClickOutside);
+    let lastScrollY = window.scrollY
 
+    const updateScrollDirection = () => {
+      const moveY = window.scrollY
+      const direction = moveY > lastScrollY ? "down" : "up"
+      if (direction !== shadow && (moveY - lastScrollY > 10 || moveY - lastScrollY < -10)) {
+        setShadow(direction)
+      }
+      lastScrollY = moveY > 0 ? moveY : 0
+    }
+    window.addEventListener("scroll", updateScrollDirection)
+    window.addEventListener("mousedown", handleClickOutside);
     return () => {
-      window.removeEventListener("scroll", handleShadow);
-      window.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+      window.addEventListener("scroll", updateScrollDirection)
+      window.addEventListener("mousedown", handleClickOutside);
+    }
+    // const handleShadow = () => {
+    //   if (window.scrollY >= 90) {
+    //     setShadow(true);
+    //   } else {
+    //     setShadow(false);
+    //   }
+    // };
+    // window.addEventListener("scroll", handleShadow);
+
+    // return () => {
+    //   window.removeEventListener("scroll", handleShadow);
+    //   window.removeEventListener("mousedown", handleClickOutside);
+    // };
+  }, [shadow]);
   return (
     <header className="w-full text-black">
       <nav
-        className={
-          shadow
-            ? "w-full shadow-lg shadow-gray-600 h-16 bg-[#ecf0f3] fixed z-[40] px-7 py-6"
-            : "w-full h-16 bg-transparent fixed z-[40] px-7 py-6"
-        }
+      className={`fixed ${shadow === "down" ? "-top-24" : "top-0"} w-full h-20 bg-white py-4 px-14 z-40 flex items-center justify-between transition-all duration-500"`}
       >
+      {/* // className={
+      //   shadow
+      //     ? "w-full shadow-lg shadow-gray-600 h-16 bg-[#ecf0f3] fixed z-[40] px-7 py-6"
+      //     : "w-full h-16 bg-transparent fixed z-[40] px-7 py-6"
+      // } */}
         <div className=" w-full xl:w-[80%] mx-auto flex items-center justify-between">
         <div className="basis-1/4 w-full">
           <Link
             href="/"
-            className="flex items-center gap-1 cursor-pointer"
+            className="flex items-center gap-1"
             aria-label="Navigate to homepage"
           >
             <Image src={logo} alt="logo" className="w-8 h-8 rounded-full" />
