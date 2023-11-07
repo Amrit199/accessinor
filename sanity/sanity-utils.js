@@ -33,3 +33,28 @@ export async function getPost(slug) {
     { slug }
   );
 }
+
+export async function getServices() {
+  return createClient(config).fetch(groq`*[_type == "service"]{
+    title,
+    "slug": slug.current,
+    intro,
+    description,
+    "image": image.asset->url,
+    "alt": image.alt,
+  }`);
+}
+
+export async function getService(slug) {
+  return createClient(config).fetch(
+    groq`*[_type == "service" && slug.current == $slug][0]{
+    title,
+    "slug": slug.current,
+    intro,
+    description,
+    "image": image.asset->url,
+    "alt": image.alt,
+  }`,
+    { slug }
+  );
+}
