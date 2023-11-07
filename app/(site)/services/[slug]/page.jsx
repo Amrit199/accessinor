@@ -14,8 +14,6 @@ export default function Page({ params }) {
     fetchData();
   }, [params.slug]);
 
-  console.log(service)
-
   if (!service) {
     return <div className="pt-28 pb-8">Loading...</div>;
   }
