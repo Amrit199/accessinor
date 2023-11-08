@@ -24,7 +24,7 @@ const Intro = () => {
                 considerations, with the ultimate aim of making the web more
                 inclusive for all users
               </p>
-              <Readmore item={"Read more about Accessinor here"} />
+              <Readmore item={"Read more about Accessinor here"} link={"/services"} />
             </div>
           </Reveal>
         </div>

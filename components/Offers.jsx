@@ -76,7 +76,7 @@ const Offers = () => {
                   <p className="text-lg">{item.intro}</p>
                   <Readmore
                     item={"Learn more"}
-                    link={item.slug}
+                    link={`/services/${item.slug}`}
                   />
                 </div>
               </div>

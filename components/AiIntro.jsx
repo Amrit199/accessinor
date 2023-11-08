@@ -24,7 +24,7 @@ const AiIntro = () => {
           disabilities rely on assistive technologies to access the web, and
           your efforts can make a significant difference in their lives.
         </p>
-        <Readmore item={"Read more AI integration"}/>
+        <Readmore item={"Read more AI integration"} link={"/services"}/>
       </div>
       <div className="w-full flex items-center justify-center h-full">
         <Image
