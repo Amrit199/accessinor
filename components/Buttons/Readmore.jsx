@@ -3,7 +3,6 @@ import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Readmore = ({ item, link }) => {
-  console.log(link)
   return (
     <div className="relative inline-block text-xl">
       <Link href={link} className="group">
