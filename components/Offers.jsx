@@ -55,9 +55,9 @@ const Offers = () => {
             ))}
           </div>
         </Reveal> */}
-        <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
             {service?.map((item, index) => (
+              <Reveal>
               <div
                 key={index}
                 className="w-full h-full lg:h-[28rem] pt-16 lg:pt-0 rounded-3xl relative overflow-hidden group/img"
@@ -80,9 +80,9 @@ const Offers = () => {
                   />
                 </div>
               </div>
+            </Reveal>
             ))}
           </div>
-        </Reveal>
       </div>
     </div>
   );

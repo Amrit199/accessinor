@@ -9,17 +9,19 @@ import Reveal from "./Reaveal";
 
 const AuditSection = () => {
   return (
-    <Reveal>
-      <div className="w-full h-full flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-16 lg:py-32 gap-12">
-        <div className="w-full">
+    <div className="w-full h-full flex bg-[#76c3d0] flex-col lg:flex-row items-center justify-center px-5 py-16 lg:py-32 gap-12">
+      <div className="w-full">
+        <Reveal>
           <Image
             src={accessibility}
             alt="accessibility checked image"
             aria-label="hand pointing to accessible icons"
             className="w-full md:w-[50%] mx-auto lg:w-full"
           />
-        </div>
-        <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
+        </Reveal>
+      </div>
+      <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
+        <Reveal>
           <h1 className="text-3xl font-bold">
             We help you to make your website{" "}
             <span className="text-white text-4xl">Accessible</span> for everyone
@@ -29,9 +31,9 @@ const AuditSection = () => {
             compliant.
           </p>
           <ContactUsButton item={"Contact Our team"} />
-        </div>
+        </Reveal>
       </div>
-    </Reveal>
+    </div>
   );
 };
 
