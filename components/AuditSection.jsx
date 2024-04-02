@@ -20,8 +20,8 @@ const AuditSection = () => {
           />
         </Reveal>
       </div>
-      <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
         <Reveal>
+      <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
           <h1 className="text-3xl font-bold">
             We help you to make your website{" "}
             <span className="text-white text-4xl">Accessible</span> for everyone
@@ -31,8 +31,8 @@ const AuditSection = () => {
             compliant.
           </p>
           <ContactUsButton item={"Contact Our team"} />
-        </Reveal>
       </div>
+        </Reveal>
     </div>
   );
 };

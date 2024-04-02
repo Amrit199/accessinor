@@ -6,13 +6,14 @@ import Intro from "@/components/Intro";
 import Offers from "@/components/Offers";
 import AiIntro from "../../components/AiIntro";
 import { AnimatePresence } from "framer-motion";
+import AccessibilityCheck from "@/components/AccessibilityCheck";
 
 export default function Home() {
   return (
     <AnimatePresence>
       <div className="w-full bg-white text-black">
         <HeroSection />
-        <Intro />
+        <AccessibilityCheck />
         <AuditSection />
         <Offers />
         <AiIntro />
