@@ -16,7 +16,7 @@ const AccessibilityCheck = () => {
     <div className="w-full relative h-full px-10 py-16 lg:py-40">
       <div className="isolate bg-white">
         <div
-          className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu blur-2xl sm:top-[8rem]"
+          className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu blur-2xl sm:top-[8rem] overflow-hidden"
           aria-hidden="true"
         >
           <div
