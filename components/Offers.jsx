@@ -26,12 +26,12 @@ const Offers = () => {
             <span className="text-primary font-bold text-3xl lg:text-4xl">
               AccessiNor
             </span>{" "}
-            Solutions
+            Løsninger
             <GrServices />
           </h3>
           <p className="text-xl">
-            Empower your website&apos;s accessibility with our specialized
-            services, designed to cater to every web accessibility need
+            Styrk nettstedets tilgjengelighet med våre spesialiserte tjenester,
+            designet for å imøtekomme alle netttilgjengelighetsbehov
           </p>
         </div>
         {/* <Reveal>
@@ -55,9 +55,9 @@ const Offers = () => {
             ))}
           </div>
         </Reveal> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
-            {service?.map((item, index) => (
-              <Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
+          {service?.map((item, index) => (
+            <Reveal>
               <div
                 key={index}
                 className="w-full h-full lg:h-[28rem] pt-16 lg:pt-0 rounded-3xl relative overflow-hidden group/img"
@@ -81,8 +81,8 @@ const Offers = () => {
                 </div>
               </div>
             </Reveal>
-            ))}
-          </div>
+          ))}
+        </div>
       </div>
     </div>
   );

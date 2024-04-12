@@ -104,7 +104,7 @@ const Navbar = () => {
           <div className="w-full lg:basis-1/4 flex items-center justify-end gap-6">
             <div className="hidden w-full md:flex items-center justify-end gap-8 text-lg">
               <DemoButton
-                item={"Get Demo"}
+                item={"Få demo"}
                 classname={
                   "flex items-center justify-center gap-1 text-black cursor-pointer flex-nowrap hover:text-[#206e61]"
                 }

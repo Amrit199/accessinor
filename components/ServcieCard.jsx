@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { BiCheckSquare } from "react-icons/bi";
 import { TbTargetArrow, TbScanEye } from "react-icons/tb";
 import {
@@ -14,45 +14,44 @@ import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
 const features = [
   {
-    name: "Comprehensive Accessibility Checks",
+    name: "Omfattende tilgjengelighetssjekker",
     description:
-      "Our AI-powered tool conducts thorough scans of your website to identify accessibility issues and provides detailed reports.",
+      "Vårt AI-drevne verktøy gjennomfører grundige skanninger av nettstedet ditt for å identifisere tilgjengelighetsproblemer og gir detaljerte rapporter.",
     icon: BiCheckSquare,
   },
   {
-    name: "Efficiency and Accuracy",
+    name: "Effektivitet og nøyaktighet",
     description:
-      "With advanced algorithms and machine learning, our checker delivers swift and precise results, saving you valuable time and effort.",
+      "Med avanserte algoritmer og maskinlæring leverer sjekkeren vår raske og presise resultater, og sparer deg for verdifull tid og krefter.",
     icon: TbTargetArrow,
   },
   {
-    name: "Customizable Scans",
+    name: "Tilpassbare skanninger",
     description:
-      "Tailor the accessibility checks to match your specific needs, ensuring compliance with the latest accessibility standards.",
+      "Skreddersy tilgjengelighetskontrollene for å matche dine spesifikke behov, for å sikre samsvar med de nyeste tilgjengelighetsstandardene.",
     icon: TbScanEye,
   },
   {
-    name: "Actionable Recommendations",
+    name: "Handlingsbare anbefalinger",
     description:
-      "Receive clear and actionable recommendations to fix accessibility issues and improve the user experience for all visitors.",
+      "Motta klare og praktiske anbefalinger for å fikse tilgjengelighetsproblemer og forbedre brukeropplevelsen for alle besøkende.",
     icon: MdOutlineRecommend,
   },
   {
-    name: "Real-time Monitoring",
+    name: "Sanntidsovervåking",
     description:
-      "Stay informed about the accessibility status of your website with automated, regular scans and alerts for any new issues that arise.",
+      "Hold deg informert om tilgjengelighetsstatusen til nettstedet ditt med automatiske, regelmessige skanninger og varsler for nye problemer som oppstår.",
     icon: MdOutlineMonitorHeart,
   },
   {
-    name: "Integration and Compatibility",
+    name: "Integrasjon og kompatibilitet",
     description:
-      "Seamlessly integrate our accessibility checker into your existing development workflow and ensure compatibility with popular content management systems.",
+      "Integrer tilgjengelighetskontrollen vår sømløst i din eksisterende utviklingsarbeidsflyt og sørg for kompatibilitet med populære innholdsstyringssystemer.",
     icon: MdOutlineIntegrationInstructions,
   },
 ];
 
 const ServiceCard = () => {
-
   return (
     <ReavealX>
       <div className="hero-component">
@@ -61,7 +60,7 @@ const ServiceCard = () => {
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  What <span className="text-primary">AccessiNor</span> Offers
+                  Hva <span className="text-primary">AccessiNor</span> tilbyr
                 </h2>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   {features.map((feature) => (
@@ -87,7 +86,7 @@ const ServiceCard = () => {
           </div>
         </div>
       </div>
-      </ReavealX>
+    </ReavealX>
   );
 };
 

@@ -23,14 +23,13 @@ const AuditSection = () => {
         <Reveal>
       <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
           <h1 className="text-3xl font-bold">
-            We help you to make your website{" "}
-            <span className="text-white text-4xl">Accessible</span> for everyone
+          Vi hjelper deg med å gjøre nettstedet ditt{" "}
+            <span className="text-white text-4xl">tilgjengelig</span> for alle
           </h1>
           <p className="text-xl mt-4">
-            Our team of experts is ready to guide you in making your website ADA
-            compliant.
+          Vårt team av eksperter er klare til å veilede deg for å gjøre nettstedet ditt ADA-kompatibelt.
           </p>
-          <ContactUsButton item={"Contact Our team"} />
+          <ContactUsButton item={"Kontakt vårt team"} />
       </div>
         </Reveal>
     </div>

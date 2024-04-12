@@ -41,7 +41,7 @@ const AccessibilityCheck = () => {
           <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
             <Reveal>
               <h1 className="text-3xl font-bold">
-                Check your website for accessibility issues!
+              Sjekk nettstedet ditt for tilgjengelighetsproblemer!
               </h1>
             </Reveal>
             <Reveal>
@@ -50,12 +50,12 @@ const AccessibilityCheck = () => {
                 className="w-full flex flex-col items-center justify-center gap-4"
               >
                 <p className="text-xl mt-4">
-                  Find out If your website is inclusive and accessible for all
+                Finn ut om nettstedet ditt er inkluderende og tilgjengelig for alle
                 </p>
                 <input
                   id="website-link-input"
                   type="text"
-                  placeholder="Enter your website link ex. https://www.google.com/"
+                  placeholder="Skriv inn lenken til nettstedet ditt f.eks. https://www.google.com/"
                   value={websiteLink}
                   onChange={(e) => setWebsiteLink(e.target.value)}
                   className="w-full text-lg border-gray-500 border-2 px-4 py-3 rounded-lg"
@@ -64,7 +64,7 @@ const AccessibilityCheck = () => {
                   type="submit"
                   className="text-white bg-gray-800 rounded-lg px-10 py-3 text-xl font-semibold"
                 >
-                  Check Now
+                  Sjekk nå
                 </button>
               </form>
             </Reveal>

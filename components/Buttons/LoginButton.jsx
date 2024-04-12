@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ const LoginButton = () => {
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 300, damping: 17 }}
       >
-        Login
+        Logg inn
       </motion.button>
     </Link>
   );
