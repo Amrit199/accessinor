@@ -82,6 +82,8 @@ const ServiceCard = () => {
               src={featureimg}
               alt="Product screenshot"
               className="w-full self-center rounded-xl shadow-xl ring-1 ring-gray-400/10"
+              width={800}
+              height={600}
             />
           </div>
         </div>
