@@ -53,7 +53,7 @@ const page = () => {
             <p className="text-md">
             Find out whether your site meets WCAG color requirements using the below color contrast checker:
             </p>
-            <button classname="flex items-center justify-center gap-1 cursor-pointer flex-nowrap bg-primary hover:bg-p-hover text-white px-6 py-1 rounded-full">
+            <button className="flex items-center justify-center gap-1 cursor-pointer flex-nowrap bg-primary hover:bg-p-hover text-white px-6 py-1 rounded-full">
               Click here
             </button>
             <Link href={`/products/contrastchecker`}>
