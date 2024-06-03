@@ -41,23 +41,39 @@ const HeroSection = () => {
           <div
             className="absolute bottom-16 left-[25%]
            w-48 h-52 rounded-2xl flex flex-col items-center justify-center flex-wrap border-2 border-white bg-gradient-to-r from-slate-300 to-white shadow-2xl shadow-gray-700"
+            role="region"
+            aria-labelledby="inkluderende-design"
           >
-            <span className=" text-lg font-bold text-center">
+            <span
+              id="inkluderende-design"
+              className=" text-lg font-bold text-center"
+            >
               Inkluderende design
             </span>
-            <FaUniversalAccess size={45} />
+            <FaUniversalAccess size={45} aria-hidden="true" />
           </div>
-          <div className="absolute -bottom-20 left-[45%] w-48 h-52 rounded-2xl flex flex-col items-center justify-center flex-wrap border-2 border-white bg-gradient-to-r from-slate-300 to-white shadow-2xl shadow-gray-700">
-            <span className=" text-lg font-bold text-center">
+          <div
+            className="absolute -bottom-20 left-[45%] w-48 h-52 rounded-2xl flex flex-col items-center justify-center flex-wrap border-2 border-white bg-gradient-to-r from-slate-300 to-white shadow-2xl shadow-gray-700"
+            role="region"
+            aria-labelledby="etiske-hensyn"
+          >
+            <span id="etiske-hensyn" className=" text-lg font-bold text-center">
               Juridiske og etiske hensyn
             </span>
-            <GiInjustice size={45} />
+            <GiInjustice size={45} aria-hidden="true" />
           </div>
-          <div className="absolute -bottom-60 left-[25%] lg:left-[65%] w-48 h-52 rounded-2xl flex flex-col items-center justify-center flex-wrap border-2 border-white bg-gradient-to-r from-slate-300 to-white shadow-2xl shadow-gray-700">
-            <span className=" text-lg font-bold text-center">
+          <div
+            className="absolute -bottom-60 left-[25%] lg:left-[65%] w-48 h-52 rounded-2xl flex flex-col items-center justify-center flex-wrap border-2 border-white bg-gradient-to-r from-slate-300 to-white shadow-2xl shadow-gray-700"
+            role="region"
+            aria-labelledby="utvidet-publikum"
+          >
+            <span
+              id="utvidet-publikum"
+              className=" text-lg font-bold text-center"
+            >
               Utvidet publikumsrekkevidde
             </span>
-            <FaUsersLine size={45} />
+            <FaUsersLine size={45} aria-hidden="true" />
           </div>
         </div>
       </div>
