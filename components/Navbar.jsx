@@ -66,12 +66,9 @@ const Navbar = () => {
         className={`fixed ${
           shadow === "down" ? "-top-24" : "top-0"
         } w-full h-20 bg-white py-4 px-6 md:px-14 z-40 flex items-center justify-between transition-all duration-500"`}
+        role="navigation"
+        aria-label="Main navigation"
       >
-        {/* // className={
-      //   shadow
-      //     ? "w-full shadow-lg shadow-gray-600 h-16 bg-[#ecf0f3] fixed z-[40] px-7 py-6"
-      //     : "w-full h-16 bg-transparent fixed z-[40] px-7 py-6"
-      // } */}
         <div className=" w-full xl:w-[80%] mx-auto flex items-center justify-between">
           <div className="basis-1/4 w-full">
             <Link
@@ -79,7 +76,11 @@ const Navbar = () => {
               className="flex items-center gap-1"
               aria-label="Navigate to homepage"
             >
-              <Image src={logo} alt="logo" className="w-8 h-8 rounded-full" />
+              <Image
+                src={logo}
+                alt="AccessiNor logo"
+                className="w-8 h-8 rounded-full"
+              />
               <span className="font-bold text-3xl">{navbar.logo}</span>
             </Link>
           </div>
@@ -141,8 +142,17 @@ const Navbar = () => {
             ? "fixed top-0 right-[-100%] w-[50%] h-full transition-all duration-500 delay-100"
             : " fixed z-30 top-0 right-0 w-[50%] h-full lg:hidden bg-white transition-all duration-500 delay-100"
         }
+        aria-hidden={!mobile}
+        role="dialog"
+        aria-label="Mobile menu"
       >
-        <div className={!mobile ? "hidden" : "flex flex-col justify-center pt-24 pb-4 gap-14 transition-all duration-500 delay-100 "}>
+        <div
+          className={
+            !mobile
+              ? "hidden"
+              : "flex flex-col justify-center pt-24 pb-4 gap-14 transition-all duration-500 delay-100"
+          }
+        >
           <ul className="flex flex-col items-center justify-center gap-6 text-xl">
             {navbar.menus.map((menu, index) => (
               <li key={index}>
@@ -150,6 +160,7 @@ const Navbar = () => {
                   href={menu.link}
                   className="hover:text-[#206e61] cursor-pointer text-[1.2rem] font-semibold"
                   onClick={handleMenu}
+                  aria-label={`Navigate to ${menu.name} page`}
                 >
                   {menu.name}
                 </Link>
