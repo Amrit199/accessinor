@@ -6,9 +6,14 @@ import Image from "next/image";
 
 const AccessibilityCheck = () => {
   const [websiteLink, setWebsiteLink] = useState("");
+  const [error, setError] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!websiteLink) {
+      setError("Nettstedets lenke er påkrevd.");
+      return;
+    }
     console.log(`Submitting website link: ${websiteLink}`);
     // Add your code to submit the website link here
   };
@@ -41,25 +46,39 @@ const AccessibilityCheck = () => {
           <div className=" w-full flex flex-col items-center justify-center gap-6 text-center">
             <Reveal>
               <h1 className="text-3xl font-bold">
-              Sjekk nettstedet ditt for tilgjengelighetsproblemer!
+                Sjekk nettstedet ditt for tilgjengelighetsproblemer!
               </h1>
             </Reveal>
             <Reveal>
               <form
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col items-center justify-center gap-4"
+                aria-labelledby="form-heading"
               >
-                <p className="text-xl mt-4">
-                Finn ut om nettstedet ditt er inkluderende og tilgjengelig for alle
+                <p id="form-heading" className="text-xl mt-4">
+                  Finn ut om nettstedet ditt er inkluderende og tilgjengelig for
+                  alle
                 </p>
+                <label htmlFor="website-link-input" className="sr-only">
+                  Nettstedets lenke
+                </label>
                 <input
                   id="website-link-input"
                   type="text"
                   placeholder="Skriv inn lenken til nettstedet ditt f.eks. https://www.google.com/"
                   value={websiteLink}
-                  onChange={(e) => setWebsiteLink(e.target.value)}
+                  onChange={(e) => {
+                    setWebsiteLink(e.target.value);
+                    setError(null);
+                  }}
                   className="w-full text-lg border-gray-500 border-2 px-4 py-3 rounded-lg"
+                  aria-invalid={error ? "true" : "false"}
                 />
+                {error && (
+                  <p className="text-red-600" role="alert">
+                    {error}
+                  </p>
+                )}
                 <button
                   type="submit"
                   className="text-white bg-gray-800 rounded-lg px-10 py-3 text-xl font-semibold"
