@@ -24,7 +24,7 @@ const HeroSection = () => {
             seg fullt ut med innhold og tjenester på nettet.
           </p>
           <motion.div
-            className="bg-primary hover:bg-p-hover text-white px-6 rounded-full"
+            className="bg-white hover:bg-slate-100 text-black px-6 rounded-full"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300, damping: 17 }}

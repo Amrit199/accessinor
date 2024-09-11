@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <AnimatePresence>
       <div className="w-full bg-white text-black">
-        <HeroSection />
         <AccessibilityCheck />
+        <HeroSection />
         <AuditSection />
         <Offers />
         <AiIntro />

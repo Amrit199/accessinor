@@ -7,15 +7,38 @@ import Image from "next/image";
 const AccessibilityCheck = () => {
   const [websiteLink, setWebsiteLink] = useState("");
   const [error, setError] = useState(null);
+  const [report, setReport] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!websiteLink) {
       setError("Nettstedets lenke er påkrevd.");
       return;
     }
-    console.log(`Submitting website link: ${websiteLink}`);
-    // Add your code to submit the website link here
+
+    setError(null);
+    setReport(null);
+    try {
+      const response = await fetch("/api/scraper", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ link: websiteLink }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.error);
+        return;
+      }
+
+      const data = await response.json();
+      setReport(data.report);
+    } catch (error) {
+      console.error("Error fetching accessibility report:", error);
+      setError("Failed to fetch the accessibility report.");
+    }
   };
   return (
     <div className="w-full relative h-full px-10 py-16 lg:py-40">
